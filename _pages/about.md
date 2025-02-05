@@ -2,7 +2,6 @@
 layout: single
 title: "About Me"
 permalink: /about/
-author_profile: true
 ---
 
 I am **[Your Name]**, a senior Cybersecurity student at the University of Michigan. I have a strong passion for ethical hacking, penetration testing, and securing digital systems.
