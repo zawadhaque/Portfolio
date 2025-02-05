@@ -1,12 +1,16 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "About Me"
+    url: /about/
+
+  - title: "Academic Projects"
+    url: /academic-projects/
+
+  - title: "Technical Projects"  # Renamed from 'Personal Projects'
+    url: /technical-projects/
+
+  - title: "Certificates"
+    url: /certificates/
+
+  - title: "Work Experience"  # Only if you decide to include it
+    url: /work-experience/
