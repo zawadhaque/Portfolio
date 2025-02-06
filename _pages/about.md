@@ -4,8 +4,7 @@ title: "About Me"
 permalink: /about/
 ---
 
-I am **[Your Name]**, a senior Cybersecurity student at the University of Michigan. I have a strong passion for ethical hacking, penetration testing, and securing digital systems.
+I am **Zawad Haque**, a Cybersecurity student at the University of Michigan. Most of my interests lie in defensive security. I have done many academic and technical projects that explore security controls, defense mechanisms, incident response, and digital forensics investigations.
+This portfolio in particular showcases these academic and technical projects, certifications, and experience.
 
-This portfolio showcases my academic and technical projects, certifications, and experience. I am actively seeking opportunities in cybersecurity. Feel free to explore my work and reach out.
-
-📧 Contact: [your.email@example.com] | [LinkedIn Profile](https://linkedin.com/in/yourname)
+📧 Contact: [zawad.haque@outlook.com] | [LinkedIn Profile](https://linkedin.com/in/zawadhaque)

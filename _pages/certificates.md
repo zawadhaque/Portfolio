@@ -4,9 +4,8 @@ title: "Certificates"
 permalink: /certificates/
 ---
 
-## Certifications
+- **CompTIA Security+** – Expected #Issued by CompTIA,# March 2025  
+- **Google Cybersecurity Professional** - Issued by Coursera, March 2025
+- **Google Cloud Cybersecurity Professional** - Issued by Coursera, May 2025
+- **HTB Certified Defensive Security Analyst** - Issued by HackTheBox, June 2025
 
-- **CompTIA Security+** – Issued by CompTIA, 2024  
-- **Certified Ethical Hacker (CEH)** – EC-Council, 2024  
-
-(Add other certifications)
