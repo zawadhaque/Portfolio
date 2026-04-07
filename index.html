@@ -11,6 +11,21 @@
 </head>
 <body>
 
+  <div id="progress-bar"></div>
+
+  <!--
+    SECTION BACKGROUNDS
+    Replace the background-image URLs with your own photos.
+    Put the image files in the same folder as index.html.
+    Example: background-image: url('about-bg.jpg');
+  -->
+  <div class="section-bg active" id="bg-hero"     style="background-image: url('./assets/hero-bg.jpg');"></div>
+  <div class="section-bg"       id="bg-about"     style="background-image: url('./assets/about-bg.jpg');"></div>
+  <div class="section-bg"       id="bg-projects"  style="background-image: url('./assets/projects-bg.jpg');"></div>
+  <div class="section-bg"       id="bg-research"  style="background-image: url('./assets/research-bg.jpg');"></div>
+  <div class="section-bg"       id="bg-skills"    style="background-image: url('./assets/skills-bg.jpg');"></div>
+  <div class="section-bg"       id="bg-contact"   style="background-image: url('./assets/contact-bg.jpg');"></div>
+
   <!-- NAV -->
   <nav>
     <a href="#hero" class="nav-logo">Zawad Haque</a>
@@ -26,14 +41,21 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-inner">
-      <span class="hero-tag">Cybersecurity Analyst | SOC | Digital Forensics</span>
-      <h1 class="hero-name">Hi, I'm<br>Zawad Haque.</h1>
-      <p class="hero-sub">
-        Cybersecurity graduate from the University of Michigan — investigating threats, analyzing forensic artifacts, and building defensive security skills through hands-on labs and research.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <div class="hero-text">
+        <span class="hero-tag">Cybersecurity Analyst | SOC | Digital Forensics</span>
+        <h1 class="hero-name">Hi, I'm<br>Zawad Haque.</h1>
+        <p class="hero-sub">
+          <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-headshot">
+        <img src="./assets/headshot.jpg" alt="Zawad Haque"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
       </div>
     </div>
   </section>
@@ -49,19 +71,19 @@
           Cybersecurity graduate from the University of Michigan with hands-on experience in SIEM analysis, digital forensics, and incident response. Skilled in investigating threats through log correlation, network traffic analysis, and system-level artifacts. Actively building real-world defensive security skills through labs, research, and practical projects.
         </p>
         <br>
-        <a href="resume.pdf" class="btn btn-primary" target="_blank">Download Résumé</a>
+        <a href="resume.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
       </div>
       <div class="about-stats fade-in">
         <div class="stat-card">
-          <div class="stat-number">5+</div>
+          <div class="stat-number" data-target="5" data-suffix="+">0</div>
           <div class="stat-label">Security Projects Completed</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Research Areas</div>
+          <div class="stat-number" data-target="2" data-suffix="">0</div>
+          <div class="stat-label">Research Projects</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">10+</div>
+          <div class="stat-number" data-target="10" data-suffix="+">0</div>
           <div class="stat-label">Tools &amp; Technologies</div>
         </div>
       </div>
@@ -223,13 +245,13 @@
             <span class="contact-link-icon">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.01v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.583V9h3.305v1.561h.046c.461-.872 1.586-1.791 3.264-1.791 3.492 0 4.135 2.299 4.135 5.291v6.391zM5.337 7.433a1.917 1.917 0 1 1 0-3.834 1.917 1.917 0 0 1 0 3.834zm1.654 13.019H3.682V9h3.309v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </span>
-            https://www.linkedin.com/in/haque-zawad
+            linkedin.com/in/haque-zawad
           </a>
           <a href="https://github.com/zawadhaque" target="_blank" class="contact-link">
             <span class="contact-link-icon">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             </span>
-            https://github.com/zawadhaque
+            github.com/zawadhaque
           </a>
         </div>
       </div>
@@ -249,7 +271,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Send Message</button>
         <p id="form-status" style="font-size:0.85rem; color: var(--accent); display:none; margin-top:0.5rem;">
-          Message sent! I'll get back to you soon.
+          Message sent! I will get back to you soon.
         </p>
       </form>
     </div>
@@ -261,25 +283,120 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
+    // Scroll progress bar
+    var progressBar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', function() {
+      var total = document.body.scrollHeight - window.innerHeight;
+      progressBar.style.width = (window.scrollY / total * 100) + '%';
+    }, { passive: true });
+
+    // Typewriter
+    var phrases = [
+      'Cybersecurity graduate from the University of Michigan.',
+      'Investigating threats through log correlation and forensics.',
+      'Building real-world defensive security skills.',
+    ];
+    var phraseIndex = 0, charIndex = 0, deleting = false;
+    var tw = document.getElementById('typewriter-text');
+    function typeLoop() {
+      var phrase = phrases[phraseIndex];
+      if (!deleting) {
+        charIndex++;
+        tw.textContent = phrase.slice(0, charIndex);
+        if (charIndex === phrase.length) {
+          deleting = true;
+          setTimeout(typeLoop, 2200);
+          return;
+        }
+      } else {
+        charIndex--;
+        tw.textContent = phrase.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+      }
+      setTimeout(typeLoop, deleting ? 32 : 52);
+    }
+    setTimeout(typeLoop, 900);
+
+    // Scroll fade-in
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          observer.unobserve(e.target);
+          fadeObserver.unobserve(e.target);
         }
       });
     }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      fadeObserver.observe(el);
+    });
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // Animated stat counters
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var target = parseInt(el.dataset.target);
+        var suffix = el.dataset.suffix || '';
+        var current = 0;
+        var step = Math.ceil(target / 40);
+        var tick = setInterval(function() {
+          current += step;
+          if (current >= target) { current = target; clearInterval(tick); }
+          el.textContent = current + suffix;
+        }, 35);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number[data-target]').forEach(function(el) {
+      counterObserver.observe(el);
+    });
 
+    // Section backgrounds + active nav
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-links a');
+    var bgMap = {
+      hero:     document.getElementById('bg-hero'),
+      about:    document.getElementById('bg-about'),
+      projects: document.getElementById('bg-projects'),
+      research: document.getElementById('bg-research'),
+      skills:   document.getElementById('bg-skills'),
+      contact:  document.getElementById('bg-contact')
+    };
+    var activeBg = 'hero';
+
+    function onScroll() {
+      var current = 'hero';
+      sections.forEach(function(sec) {
+        if (window.scrollY >= sec.offsetTop - window.innerHeight * 0.4) {
+          current = sec.id;
+        }
+      });
+      navLinks.forEach(function(a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+      if (current !== activeBg) {
+        if (bgMap[activeBg]) bgMap[activeBg].classList.remove('active');
+        if (bgMap[current])  bgMap[current].classList.add('active');
+        activeBg = current;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Contact form
     function handleSubmit(e) {
       e.preventDefault();
-      const status = document.getElementById('form-status');
+      var status = document.getElementById('form-status');
       status.style.display = 'block';
       e.target.reset();
-      setTimeout(() => status.style.display = 'none', 4000);
+      setTimeout(function() { status.style.display = 'none'; }, 4000);
     }
   </script>
 
