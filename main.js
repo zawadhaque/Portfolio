@@ -6,7 +6,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
   var canvas = document.getElementById('binary-canvas');
   var ctx    = canvas.getContext('2d');
   var cols, drops, colStrings;
-  var fontSize = 11;
+  var fontSize = 12;
   var colWidth = 160;
   var SPEED    = 0.4;
   var TAIL_LEN = 10;
